@@ -1,9 +1,8 @@
-* 
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -31,7 +30,7 @@ body {
   font-weight: 600;
   cursor: default;
   opacity: 0;
-  animation:slideRight 1s ease forwards;
+  animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
@@ -41,13 +40,14 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
-  transition: .3s;
+  transition: 0.3s;
   opacity: 0;
-  animation:slideTop .5s ease forwards;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
 }
 
 .navbar a:hover {
-  color:#00eeff;
+  color: #00eeff;
 }
 
 .home {
@@ -55,7 +55,7 @@ body {
   width: 100%;
   justify-content: space-between;
   height: 100vh;
-  background: url('background-1.png') no-repeat;
+  background: url("background-1.png") no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -70,15 +70,17 @@ body {
   font-size: 32px;
   font-weight: 700;
   opacity: 0;
-  animation:slideTop 1s ease forwards;
-  animation-delay: .7s;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
 }
 .home-content h3:nth-of-type(2) {
   margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0.7s;
 }
 
 .home-content h3 span {
-  color: #0B8BEF;
+  color: #0b8bef;
 }
 
 .home-content h1 {
@@ -86,14 +88,14 @@ body {
   font-weight: 700;
   margin: -3px 0;
   opacity: 0;
-  animation:slideRight 1s ease forwards;
+  animation: slideRight 1s ease forwards;
   animation-delay: 1s;
 }
 
 .home-content p {
   font-size: 20px;
   opacity: 0;
-  animation:slideLeft 1s ease forwards;
+  animation: slideLeft 1s ease forwards;
   animation-delay: 1s;
 }
 
@@ -111,8 +113,8 @@ body {
   text-decoration: none;
   transition: 0.5s ease;
   opacity: 0;
-  animation:slideLeft 1s ease forwards;
-  animation-delays:calc(.2s *var);
+  animation: slideLeft 1s ease forwards;
+  animation-delays: calc(0.2s * var(--i));
   margin: 30px 15px 30px 0;
 }
 .home-sci a:hover {
@@ -131,56 +133,55 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+
+  animation: slideTop 1s ease forwards;
+  animation-delay: 2s;
+  box-shadow: 0 0 5px #00eeff, 0 0 25px #00eeff;
 }
 
 .btn-box:hover {
-  box-shadow: 0 0 5px cyan,
-             0 0 25px cyan,
-             0 0 50px cyan,
-             0 0 100px cyan;
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan;
 }
 
 @keyframes slideRight {
   0% {
-      transform: translateX(-100px);
-      opacity: 0;
+    transform: translateX(-100px);
+    opacity: 0;
   }
   100% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-
 @keyframes slideLeft {
   0% {
-      transform: translateX(100px);
-      opacity: 0;
+    transform: translateX(100px);
+    opacity: 0;
   }
   100% {
-      transform: translateX(0);
-      opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes slideTop {
   0% {
-      transform: translateY(100px);
-      opacity: 0;
+    transform: translateY(100px);
+    opacity: 0;
   }
   100% {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes slideBottom {
   0% {
-      transform: translateY(100px);
-      opacity: 0;
+    transform: translateY(100px);
+    opacity: 0;
   }
   100% {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
 }
