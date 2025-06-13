@@ -7,7 +7,8 @@
 
 body {
   color: #ededed;
-  background-color: #081b29;
+  /* background-color: #081b29; */
+  background: url("port-back.jpg") repeat;
 }
 
 .header {
@@ -246,7 +247,7 @@ body {
   }
 }
 
-/* ABOUT SECTION CASCADING*/
+/* ABOUT SECTION CASCADING */
 .about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -283,4 +284,67 @@ body {
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 4rem;
+
 }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-img {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  
+  .about-text {
+    order: 2;
+    text-align: center;
+  }
+  
+  .about-text h2 {
+    font-size: 50px;
+  }
+  
+  .about-text h4 {
+    font-size: 25px;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text h2 {
+    font-size: 40px;
+  }
+  
+  .about-text h4 {
+    font-size: 22px;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text h2 {
+    font-size: 32px;
+  }
+  
+  .about-text h4 {
+    font-size: 20px;
+    margin: 10px 0 20px;
+  }
+  
+  .about-text p {
+    font-size: 15px;
+    margin-bottom: 2rem;
+  }
+}
+
