@@ -14,7 +14,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10%;
+  padding: 20px 5%;
   background: transparent;
   display: flex;
   justify-content: space-between;
@@ -60,7 +60,7 @@ body {
   background-position: center;
   display: flex;
   align-items: center;
-  padding: 70px 10% 0;
+  padding: 70px 5% 0;
 }
 .home-content {
   max-width: 600px;
@@ -133,7 +133,6 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   font-weight: 600;
-
   animation: slideTop 1s ease forwards;
   animation-delay: 2s;
   box-shadow: 0 0 5px #00eeff, 0 0 25px #00eeff;
@@ -141,6 +140,66 @@ body {
 
 .btn-box:hover {
   box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .header {
+    padding: 20px 3%;
+  }
+  .home {
+    padding: 70px 3% 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-content h1 {
+    font-size: 48px;
+  }
+  .home-content h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .home-content h1 {
+    font-size: 40px;
+  }
+  .home-content h3 {
+    font-size: 24px;
+  }
+  .home-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    font-size: 20px;
+  }
+  .home-content h1 {
+    font-size: 32px;
+  }
+  .home-content h3 {
+    font-size: 20px;
+  }
+  .home-content p {
+    font-size: 16px;
+  }
+  .btn-box {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  .home-sci a {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin: 20px 10px 20px 0;
+  }
 }
 
 @keyframes slideRight {

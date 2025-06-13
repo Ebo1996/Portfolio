@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
     <link rel="stylesheet" href="stylesheet.css" />
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
@@ -12,35 +14,57 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="#" style="--1: 1" class="active">Home</a>
-            <a href="#" style="--1: 2">About</a>
-            <a href="#" style="--1: 3">Skill</a>
-            <a href="#" style="--1: 4">Portfolio</a>
-            <a href="#" style="--1: 5">Contact</a>
-        </nav>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="#" class="logo">Portfolio</a>
+                </div>
+                <div class="col-6 col-md-8 col-lg-9">
+                    <nav class="navbar navbar-expand-md justify-content-end">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="bx bx-menu text-white fs-1"></i>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <div class="navbar-nav">
+                                <a href="#" style="--1: 1" class="nav-link active">Home</a>
+                                <a href="#" style="--1: 2" class="nav-link">About</a>
+                                <a href="#" style="--1: 3" class="nav-link">Skill</a>
+                                <a href="#" style="--1: 4" class="nav-link">Portfolio</a>
+                                <a href="#" style="--1: 5" class="nav-link">Contact</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section class="home">
-        <div class="home-content">
-            <h3>Hello, It's Me</h3>
-            <h1>Ebisa Berhanu</h1>
-            <h3>And I'm  A u<span class="text">Web Developer</span></h3>
-            <p>
-                
-            </p>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="home-content">
+                        <h3>Hello, It's Me</h3>
+                        <h1>Ebisa Berhanu</h1>
+                        <h3>And I'm A <span class="text">Web Developer</span></h3>
+                        <p></p>
 
-            <div class="home-sci">
-                <a href="#" style="--1: 1"><i class="bx bxl-facebook"></i></a>
-                <a href="#" style="--1: 2"><i class="bx bxl-instagram"></i></a>
-                <a href="#" style="--1: 3"><i class="bx bxl-whatsapp"></i></a>
-                <a href="#" style="--1: 4"><i class="bx bxl-tiktok"></i></a>
+                        <div class="home-sci">
+                            <a href="#" style="--1: 1"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" style="--1: 2"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" style="--1: 3"><i class="bx bxl-whatsapp"></i></a>
+                            <a href="#" style="--1: 4"><i class="bx bxl-tiktok"></i></a>
+                        </div>
+
+                        <a href="#" class="btn-box">More About Me</a>
+                    </div>
+                </div>
             </div>
-
-            <a href="#" class="btn-box">More About Me</a>
         </div>
     </section>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 </body>
 
