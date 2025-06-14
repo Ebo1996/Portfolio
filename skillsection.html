@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Section</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bs-link-color-rgb: 33, 37, 41;
+            --bs-link-hover-color-rgb: 0, 238, 255;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .skills-section {
+            background: url("port-back.jpg") repeat;
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .container1 {
+            flex: 1;
+            min-width: 500px;
+            max-width: 600px;
+            padding: 40px;
+            /* background-color: rgba(255, 255, 255, 0.95); */
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .container1:hover {
+            --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+            box-shadow: 0 0 30px rgba(var(--bs-link-hover-color-rgb), 0.3);
+            transform: translateY(-5px);
+        }
+
+        .heading1 {
+            text-align: center;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            text-decoration-thickness: 4px;
+            margin-bottom: 50px;
+            color: #333;
+            font-size: 28px;
+        }
+
+        .heading1 span {
+            color: rgb(0, 238, 255);
+        }
+
+        /* Rest of your existing CSS remains the same */
+        .Technical-bars {
+            margin-top: 30px;
+        }
+
+        .Technical-bars .bar {
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .Technical-bars .bar:first-child {
+            margin-top: 0;
+        }
+
+        .Technical-bars .bar:last-child {
+            margin-bottom: 0;
+        }
+
+        .Technical-bars .bar .info {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .Technical-bars .bar i {
+            font-size: 24px;
+        }
+
+        .Technical-bars .bar .info span {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .Technical-bars .bar .progress-line {
+            height: 10px;
+            width: 100%;
+            background: #f0f0f0;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .Technical-bars .bar .progress-line span {
+            position: absolute;
+            height: 100%;
+            width: 0;
+            left: 0;
+            top: 0;
+            background: linear-gradient(90deg, #00e0ff, #00a2ff);
+            border-radius: 10px;
+            animation: animate 1.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+        }
+
+        @keyframes animate {
+            100% {
+                width: var(--width);
+            }
+        }
+
+        .progress-line.html span { --width: 90%; }
+        .progress-line.css span { --width: 85%; }
+        .progress-line.javascript span { --width: 75%; }
+        .progress-line.python span { --width: 80%; }
+        .progress-line.react span { --width: 70%; }
+        .progress-line.php span { --width: 65%; }
+        .progress-line.cpp span { --width: 78%; }
+        .progress-line.java span { --width: 82%; }
+
+        .Technical-bars .bar .progress-line span::after {
+            content: attr(data-width);
+            position: absolute;
+            right: 0;
+            top: -35px;
+            background: #333;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Radial Bars Styles */
+        .radial-bars {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .radial-bar {
+            position: relative;
+            height: 180px;
+            width: 100%;
+        }
+
+        .radial-bar svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            height: 160px;
+            width: 160px;
+        }
+
+        .radial-bar .progress-bar {
+            fill: transparent;
+            stroke: #f0f0f0;
+            stroke-width: 10;
+            stroke-linecap: round;
+        }
+
+        .radial-bar .path {
+            fill: transparent;
+            stroke: url(#gradient);
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-dasharray: 502;
+            stroke-dashoffset: 502;
+            animation: animate-path 1.5s linear forwards;
+        }
+
+        .radial-bar .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .radial-bar .text {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            text-align: center;
+            width: 100%;
+            text-transform: capitalize;
+        }
+
+        .path-1 { animation-delay: 0.5s; }
+        .path-2 { animation-delay: 1s; }
+        .path-3 { animation-delay: 1.5s; }
+        .path-4 { animation-delay: 2s; }
+
+        @keyframes animate-path {
+            100% {
+                stroke-dashoffset: var(--offset);
+            }
+        }
+
+        .path-1 { --offset: 50; }  /* 90% */
+        .path-2 { --offset: 75; }  /* 85% */
+        .path-3 { --offset: 25; }  /* 95% */
+        .path-4 { --offset: 60; }  /* 88% */
+
+        /* SVG Gradient */
+        svg.radial-svg {
+            position: absolute;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .skills-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .container1 {
+                width: 100%;
+                max-width: 800px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container1 {
+                min-width: unset;
+                padding: 30px;
+            }
+            
+            .radial-bars {
+                grid-template-columns: 1fr;
+            }
+            
+            .heading1 {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container1 {
+                padding: 20px;
+            }
+            
+            .Technical-bars .bar .info span {
+                font-size: 16px;
+            }
+            
+            .radial-bar {
+                height: 150px;
+            }
+            
+            .radial-bar svg {
+                height: 140px;
+                width: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="skills-section">
+        <svg class="radial-svg" width="0" height="0">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00e0ff" />
+                    <stop offset="100%" stop-color="#00a2ff" />
+                </linearGradient>
+            </defs>
+        </svg>
+        
+        <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="container1" id="skills">
+                <h1 class="heading1">Technical <span>Skills</span></h1>
+                <div class="Technical-bars">
+                    <div class="bar">
+                        <i class='bx bxl-html5' style="color: #e34c26"></i>
+                        <div class="info">
+                            <span>HTML</span>
+                        </div>
+                        <div class="progress-line html"><span data-width="90%"></span></div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-css3' style="color: #264de4"></i>
+                        <div class="info">
+                            <span>CSS</span>
+                        </div>
+                        <div class="progress-line css"><span data-width="85%"></span></div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-javascript' style="color: #f0db4f"></i>
+                        <div class="info">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="progress-line javascript"><span data-width="75%"></span></div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-python' style="color: #3776ab"></i>
+                        <div class="info">
+                            <span>Python</span>
+                        </div>
+                        <div class="progress-line python"><span data-width="80%"></span></div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-react' style="color: #61dbfb"></i>
+                        <div class="info">
+                            <span>React</span>
+                        </div>
+                        <div class="progress-line react"><span data-width="70%"></span></div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-php' style="color: #777bb3"></i>
+                        <div class="info">
+                            <span>PHP</span>
+                        </div>
+                        <div class="progress-line php"><span data-width="65%"></span></div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-c-plus-plus' style="color: #00599c"></i>
+                        <div class="info">
+                            <span>C++</span>
+                        </div>
+                        <div class="progress-line cpp"><span data-width="78%"></span></div>
+                    </div>
+                    <div class="bar">
+                        <i class='bx bxl-java' style="color: #007396"></i>
+                        <div class="info">
+                            <span>Java</span>
+                        </div>
+                        <div class="progress-line java"><span data-width="82%"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Skills -->
+            <div class="container1">
+                <h1 class="heading1">Professional <span>Skills</span></h1>
+                <div class="radial-bars">
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                        <div class="text">Creativity</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">85%</div>
+                        <div class="text">Communication</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">95%</div>
+                        <div class="text">Problem Solving</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">88%</div>
+                        <div class="text">Teamwork</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
