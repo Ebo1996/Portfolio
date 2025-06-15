@@ -1,2 +1,4 @@
 # Portfolio
-
+HTML
+CSS
+JS
