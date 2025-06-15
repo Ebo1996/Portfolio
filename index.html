@@ -14,6 +14,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     />
     <link rel="stylesheet" href="stylesheet.css" />
+    
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   </head>
 
@@ -41,13 +42,13 @@
                 class="collapse navbar-collapse justify-content-end"
                 id="navbarNav"
               >
-                <div class="navbar-nav">
-                  <a href="#" style="--i: 1" class="nav-link active">Home</a>
-                  <a href="#" style="--i: 2" class="nav-link">About</a>
-                  <a href="#" style="--i: 3" class="nav-link">Skill</a>
-                  <a href="#" style="--i: 4" class="nav-link">Portfolio</a>
-                  <a href="#" style="--i: 5" class="nav-link">Contact</a>
-                </div>
+              <div class="navbar-nav">
+                <a href="#home" style="--i: 1" class="nav-link active" aria-current="page">Home</a>
+                <a href="#about" style="--i: 2" class="nav-link">About</a>
+                <a href="#skills" style="--i: 3" class="nav-link">Skills</a>
+                <a href="#portfolio" style="--i: 4" class="nav-link">Portfolio</a>
+                <a href="#contact" style="--i: 5" class="nav-link">Contact</a>
+              </div>
               </div>
             </nav>
           </div>
@@ -58,20 +59,29 @@
     <section class="home" id="home">
       <div class="container">
         <div class="row align-items-center">
+          <!-- Left Column - Content -->
           <div class="col-12 col-md-8 col-lg-6">
             <div class="home-content">
               <h3>Hello, It's Me</h3>
               <h1>Ebisa Berhanu</h1>
               <h3>And I'm A <span class="text">Web Developer</span></h3>
-
+    
+              <!-- Social Icons -->
               <div class="home-sci">
                 <a href="#" style="--i: 1"><i class="bx bxl-facebook"></i></a>
                 <a href="#" style="--i: 2"><i class="bx bxl-instagram"></i></a>
                 <a href="#" style="--i: 3"><i class="bx bxl-whatsapp"></i></a>
                 <a href="#" style="--i: 4"><i class="bx bxl-tiktok"></i></a>
               </div>
-
+    
               <a href="#" class="btn-box">More About Me</a>
+            </div>
+          </div>
+          
+          <!-- Right Column - Image -->
+          <div class="col-12 col-md-4 col-lg-6">
+            <div class="home-image">
+              <img src="circle.png" alt="Ebisa Berhanu" class="img-fluid">
             </div>
           </div>
         </div>
@@ -324,7 +334,10 @@
       </form>
   </div>
 </section>
-
+<div class="last-text">
+  <p>Developed by ebisa @ 2025</p>
+</div>
+<a href="#" class="top"><i class='bx bx-up-arrow-alt'></i></a>
 
 
     <!-- Bootstrap JS -->

@@ -1,0 +1,150 @@
+/* General Styles */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --text-color: #ecf0f1;
+  --bg-color: #1a1a2e;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+  padding: 2rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-content {
+  padding: 2rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--primary-color);
+}
+
+.navbar-nav {
+  gap: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Header Image Styles */
+.header-image {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.header-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--primary-color);
+  box-shadow: 0 0 30px rgba(52, 152, 219, 0.5);
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .header {
+    text-align: center;
+    padding-top: 5rem;
+  }
+  
+  .header-content {
+    order: 2;
+  }
+  
+  .header-image {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  
+  .navbar-nav {
+    justify-content: center;
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-image img {
+    max-width: 250px;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+  }
+}
